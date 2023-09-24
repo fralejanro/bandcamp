@@ -1,21 +1,19 @@
-package com.sophossolutions.bandcamp.controller;
+package com.sophossolutions.bandcamp.controller.v2;
 
 import com.sophossolutions.bandcamp.dto.GenreDTO;
 import com.sophossolutions.bandcamp.model.Genre;
 import com.sophossolutions.bandcamp.service.GenreService;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @RestController
-@RequestMapping("/genre")
-@PreAuthorize("hasRole('admin')")
-public class GenreController {
+@RequestMapping("/v2/genre")
+public class GenreControllerV2 {
 
     private final GenreService genreService;
 
-    public GenreController(GenreService genreService){
+    public GenreControllerV2(GenreService genreService){
         this.genreService = genreService;
     }
 

@@ -13,13 +13,13 @@ import org.springframework.context.annotation.Configuration;
 public class AwsConfig {
 
 
-    @Value("{aws_access_key}")
+    @Value("${aws.access-key}")
     private String accessKey;
 
-    @Value("{aws_secret_key}")
+    @Value("${aws.secret-key}")
     private String secretKey;
 
-    @Value("{aws_service_endpoint}")
+    @Value("${aws.service-endpoint}")
     private String serviceEndpoint;
     @Bean
     public AmazonSQS sqsConfig(){
